@@ -1,1 +1,97 @@
-123
+Course project: Implementation and Documentation
+The user documentation should include at least the following information:
+•	A high-level description. What does the system do and why would a user want to use it.
+Internet big data provides us with convenience, using the Internet for online transactions of second-hand books, and solving the problem of the demand for second-hand teaching materials for the majority of college students. The reuse of second-hand books avoids unnecessary waste, maximizes the value of books, saves social resources, and protects the ecological environment. We designed a small program to provide publicity for second-hand books and set up a second-hand book sales platform to solve students' troubles of cleaning up second-hand books and reduce the waste of second-hand books among students.
+
+Through the small program, students can put on the shelves the books that need to be sold by category to form a second-hand book pool. When other students see the books that meet their wishes, they can contact the book sellers and make transactions. Improve the trading efficiency of the second-hand book market. And carry out data analysis and intelligent recommendation on the data of successful transactions, understand the needs of our students for books, and feed back the data to the school library, which can put relevant types of books on the shelves more reasonably.
+•	How to install the software. If your system has prerequisites (e.g., tools, libraries, emulators, third-party applications, etc.), your instructions should list all of them and indicate how to install and configure them. Make sure to indicate what specific version requirements these prerequisites must satisfy. If running the system requires the installation of, e.g., a virtual machine, a database, or an emulator, make sure to provide clear step-by-step instructions.
+Our second-hand book trading platform is in the wechat applet. 
+Installation of wechat applet:
+1. Go to the group file to download the installation package;
+2. Environmental requirements: (mandatory) PHP5 4 + pagoda panel (IC and sg11 components need to be installed in php5.4);
+3. Bind the domain name to the weidogsxcx / Pub / folder and click add site.
+4. After the website is added, click the domain name on the left to enter the configuration of pseudo static and SSL certificates.
+5. If it is an nginx server, the user will be automatically generated in the weidogsxcx / pub directory after the website is added INI file.
+6. Arbitrarily resolve a secondary domain name and bind it to / weidogoss / directory (store pictures)
+Database installation：
+                  1.Download MySQL
+                  2.Unzip the package
+                  3.Add environment variable
+                  4.Add to system service
+                  5.Log in to the database and use it
+•	How to run the software. How to start up the system?
+It is very simple to run. You only need to search this applet on wechat, and you can use it directly after opening it.
+•	How to use the software. You can assume that your user is familiar with your particular platform (e.g., use of a Web browser, desktop applications, or mobile applications). For missing functionality, your documentation should simply indicate that this functionality is work in progress.
+First, let's open the wechat app. After entering the soft key, click "ME" in the lower right corner, then click Settings, click General, click the discovery page management option under the general page, open the switch on the right side of the small program. Then enter second-hand books in the search box at the top of the main page, search, click the small program options appear to enter. After entering the small program, first we will see the pop-up information authorization box. If you want to use our applet, please press the allow button. If you do not agree to authorize your information, we will respect your wishes and exit the applets. After being authorized to enter the mini program, we will register a personal information and show how to use it. You just need to follow the guide, you can easily understand the use of our small program.
+•	How to report a bug. This should include not just the mechanics (a pointer to your issue tracker), but also what information is needed. You can set up a bug-report template in your issue tracker, or you can reference a resource about how to write a good bug report. Here is an example for bug reporting guidelines.
+The main way our applet reports errors is by bouncing off error prompts. We may be common error prompts have 404 error: 404 error message is usually in the target page is changed or removed, or the client input page address error page display, people are accustomed to use 404 as the server to find the file error code. In the HTTP request three-bit return code, the beginning of 4 represents a client error, and the beginning of 5 represents a server error. HTTP-Internal Server Error indicates that the IS Server cannot parse the ASP code. If an HTTP 500 Error occurs, the page cannot be opened.
+
+•	Known bugs. Known bugs or limitations should be documented in the bug tracker. A user testing the implemented use case(s) should not encounter trivial bugs (e.g., NPEs) or a large number of bugs that are unlisted in your bug tracker.
+In the process of program development, we will encounter many problems. There are a few known problems, and while they don't always exist, they occasionally pop up with errors. 1. The official document sample code is wrong, sometimes the official document sample code will also have problems, such as case error, or other missing parameters and other problems; 2, misspelled letters, including letter spelling errors, not paying attention to case; Wechat small program, there are a lot of such code examples, from the middle of a capital. 3. Wechat cache; Wechat cache will lead to a lot of unknown bugs, currently found to be unable to preview the real phone, and jump out of the error: need to clear the application cache, or use a second phone for testing to eliminate this problem; 4, the official BUG, you do not solve problems is likely to be the official bugs, specific can refer to the official document, for new series "four" official documentation bugs, tip and QA prompt list, as well as the latest official reply, there are two official help, more updates, can be "official" search keywords of the site or to the official developer community query; Wechat mini program official help out. 5. Wechat version problems. With the update of wechat version, different unknown bugs may appear between different wechat versions.
+3. Developer documentation
+Your public repository must contain developer guidelines. Anyone looking at your repository should be able to easily find these guidelines. The developer guidelines are focused solely on people who want to contribute to your project.
+The developer documentation should include at least the following information:
+•	How to obtain the source code. If your system uses multiple repositories or submodules, provide clear instructions for how to obtain all relevant sources.
+•	After entering the URL, press the Enter key to enter the website.
+•	After entering the website, right click the mouse on the webpage.
+•	After right-clicking the mouse, a slender long list will pop up.
+•	In the slender and long list, you can find and click "View Source File".
+•	Then, you can see the source code of this page.
+•	The layout of your directory structure: At the top level, the pom.xml file describing the project: file. In addition, there are text documents meant for the user to be able to read immediately upon receiving this power: README.txt, LICENSE.txt, etc.
+•	
+•	The structure has only two subdirectories: src and target. The only other things that will be expected in this directory are metadata like cvs, .git or .svn, and any subprojects in the multi-build (each of which will be laid out as above).
+•	
+•	The target directory is used to hold all the output of the build.
+•	
+•	This src directory contains all the source material used to build the project, its site, etc. It contains subdirectories of each type: main for the main build artifacts, test for unit test code and resources, site, and so on.
+•	Source files, etc. can be found through properties
+•	How to build the software.
+•	 Provide clear instructions for how to use your project’s build system to build all system components.
+•	Clarify the realization purpose (goal) of the software; What process sequence (function point) is required to complete the purpose (goal); If there is an interface, the interface (product prototype) will be made immediately after the process is done (almost synchronous); When the system scheme and architecture can be determined, it is time to write code; Write out what you want to write (each step) with notes first; Add appropriate code to your comments; Test, modify and verify the completion degree of the goal to achieve the goal (goal)
+•	The wechat applet for second-hand book trading is developed based on wechat developer tool 1.05. The front end uses native development and the back end uses node JS development. The same database and two data tables, products and types used by the database and background management system. The establishment of software first needs to generate a database.
+•	In the development process, the most commonly used method is capi method, that is to operate the data
+•	Through the interface provided by mysql. Its underlying implementation is the application
+•	The interface is written in C language with high execution efficiency.
+•	How to test the software. Provide clear instructions for how to run the system’s test cases. In some cases, the instructions may need to include information such as how to access data sources or how to interact with external systems. You may reference the user documentation (e.g., prerequisites) to avoid duplication.
+•	Manual testing: it means that testers manually input and execute one by one according to the test cases written in advance to cover the requirements of the tested software and the test steps and methods described in the test outline, including interacting with the tested software (such as inputting test data, recording test results, etc.), and then observe the test results to see whether there are problems in the tested program or whether there will be a problem in the execution process, It is a relatively original but necessary step.
+•	Automated testing: in fact, it is to hand over a large number of repetitive testing work to the computer to complete, usually using automated testing tools to simulate manual testing steps, Execute the process written in a programming language (full-automatic test refers to the whole process of the test automatically completed by the program without manual intervention in the process of automatic test; semi-automatic test refers to the process in which the test case needs to be manually input or the test path needs to be selected, and then the automatic test program completes the automatic test according to the requirements specified manually)
+•	
+•	How to add new tests. Are there any naming conventions/patterns to follow when naming test files? Is there a particular test harness to use?
+•	1. Function test
+•	
+•	The functional test shall be subject to the requirements documents and interactive visual documents. If there are no these documents, refer to the test method of app, that is, test it as the app of mobile phone.
+•	
+•	2. Compatibility test
+•	
+•	01. Compatibility of operating system
+•	
+•	The operating system here mainly refers to Android system and IOS system. The applet running in wechat seems to have nothing to do with the operating system, but in fact it does, because the underlying call depends on the specific operating system. According to the official document, the wechat applet runs in the JavaScript core on IOS, but it is parsed through x5jscore on Android.
+•	
+•	If possible, it should cover not only Android and IOS, but also mainstream Android brands, such as Huawei, Xiaomi, oppo, etc. Cover the latest trial version and the current popular major version.
+•	
+•	02. Screen compatibility
+•	
+•	Ordinary mobile apps have screen compatibility problems, and small programs also have such problems, but they are relatively few. Wechat applet defines a new size unit rpx (responsive pixel), which can adapt to different sizes of screens. If the unit of the object defined on the page is rpx, it can adapt to different screens. However, 1rpx pixels are often disconnected on the iPhone 7p. Therefore, we need to pay attention to the display of 1rpx pixels during the test.
+•	
+•	03. Wechat compatibility
+•	
+•	Because the API version of wechat applet SDK is always updated, the API of SDK may have downward compatibility problems, which will eventually affect that the programs developed on the latest version of applet SDK cannot run as expected on the lower version of SDK. Therefore, before testing the compatibility of wechat version, it is necessary to determine which wechat version number the library version used by the applet supports.
+•	
+•	How to build a release of the software. Describe any tasks that are not automated. For example, should a developer update a version number (in code and documentation) prior to invoking the build system? Are there any sanity checks a developer should perform after building a release?
+•	According to the development documents, there are the following message restrictions
+•	
+•	Payment: when the user has completed the payment behavior in the applet, the developer can be allowed to push a limited number of template messages to the user within 7 days (one payment can be distributed, and the number of distributed messages for multiple payments is independent and does not affect each other)
+•	
+•	Submit a form. When the user has submitted a form in the applet and the form is declared to be sending template messages, and the developer needs to provide services to the user, the developer can be allowed to push a limited number of template messages to the user within 7 days (one form can be sent once, and the number of times submitted and issued is independent and does not affect each other)
+•	
+
+•	The performance of small programs is not the focus of testing small programs, and the priority is relatively low. The performance of the applet is very similar to the performance test of the web, and the common indicators of performance are roughly the same. Including white screen time, first screen time, resource occupation, page rendering time, frame rate, etc.
+•	
+•	In the applet development version, you can see the performance data of the page by opening the performance window, but if it is a officially released version, you need to bury points to collect this information.
+•	
+•	
+•	The applet is embedded into wechat, but Tencent may not spend too much energy on the security of the applet. Don't expect Tencent to help you improve your security. For testers, what we can do for security related testing is limited after all. All we have to do is know that the applet has potential security risks. For example, after the applet runs, we can see a wxapkg package on the mobile phone. After decompression, this package can be regarded as the source code of the applet.
+•	
+•	The permission here refers to whether the access permission is authorized, so the permission test is divided into "authorized" and "unauthorized". Therefore, it is necessary to test whether the functions of the applet can work normally under the two conditions of "allow access" and "do not allow access" when jumping to the wechat applet
+
+
