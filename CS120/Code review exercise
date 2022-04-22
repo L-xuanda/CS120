@@ -1,0 +1,44 @@
+Code review exercise
+
+
+
+
+public class Account {
+
+double principal, rate;
+
+int daysActive, accountType;
+
+public static final int STANDARD=0, BUDGET=1, PREMIUM=2, PREMIUM_PLUS=3; // type
+
+
+public static double calculateFee(Account[] accounts)
+
+{
+
+double totalFee = 0.0;
+
+Account account;
+
+for (int i=0;i<accounts.length;i++) {
+
+account=accounts[i];
+
+if(account.accountType == Account.PREMIUM ||
+
+account.accountType == Account.PREMIUM_PLUS) totalFee += .0125 * ( // 1.25% broker's fee
+
+(Account.principal * Math.pow(account.rate, (account.daysActive/365.25))
+- account.principal); // interest
+
+}
+
+return totalFee;
+
+}
+
+}
+
+https://docs.google.com/presentation/d/1HApE5DAYR2ElyjKYhvrcNHVNn29iVkWREiBFxqTBf_s
+ 
+This code uses C + + code and creates a class. First, it defines a new type of shaping variable. The main function of this code is to calculate the price. It uses the for loop to traverse the number of accounts, and then increases it by 1.25 times each time to calculate the interest
